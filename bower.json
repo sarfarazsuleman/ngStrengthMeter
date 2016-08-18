@@ -1,0 +1,24 @@
+{
+  "name": "ngStrengthMeter",
+  "description": "Nifty password strength meter directive",
+  "main":  [
+    "dist/app.min.js",
+    "dist/app.min.css"
+  ],
+  "authors": [
+    "Saf Suleman <sarfarazs21@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/sarfarazsuleman/ngStrengthMeter",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+  }
+}
