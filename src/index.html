@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ngStrengthMeter</title>
+
+    <link rel="stylesheet" type="text/css" href="app.css">
+  </head>
+
+  <body ng-app="ngStrengthMeter">
+    <label for="password">Enter Password:</label>
+    <input type="text" name="password" ng-model="inputPassword">
+
+    <strength-meter password="{{inputPassword}}"></strength-meter>
+
+    <script src="app.vendor.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

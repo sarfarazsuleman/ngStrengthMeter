@@ -1,0 +1,47 @@
+$strength-bg:#d8d8d8;
+$strength-weak:#f44336;
+$strength-okay:#fdd835;
+$strength-good:#aed581;
+$strength-excellent:#4caf50;
+
+.strength-meter {
+  width: 280px;
+  height: 4px;
+  margin: 0 0 15px 10px;
+
+  >div {
+    width:67px;
+    height: inherit;
+    float: left;
+    margin: 0 4px 0 0;
+    background-color: $strength-bg;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &.strength-1 {
+    .bar1 {
+      background-color: $strength-weak;
+    }
+  }
+
+  &.strength-2 {
+    .bar1, .bar2 {
+      background-color: $strength-okay;
+    }
+  }
+
+  &.strength-3 {
+    .bar1, .bar2, .bar3 {
+      background-color: $strength-good;
+    }
+  }
+
+  &.strength-4 {
+    .bar1, .bar2, .bar3, .bar4 {
+      background-color: $strength-excellent;
+    }
+  }
+}
