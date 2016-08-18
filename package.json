@@ -1,10 +1,10 @@
 {
-  "name": "ngStrengthMeter",
+  "name": "ng-strength-meter",
   "version": "1.0.0",
   "description": "Nifty password strength meter directive",
   "main": [
-    "dist/app.min.js",
-    "dist/app.min.css"
+    "dist/app.js",
+    "dist/app.css"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
