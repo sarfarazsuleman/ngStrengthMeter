@@ -73,7 +73,7 @@
 
   function _compileJs() {
     return gulp.src(paths.js)
-      .pipe(concat('app.min.js')
+      .pipe(concat('app.js')
         .on('error',_handleErr))
       .pipe(ngAnnotate()
         .on('error',_handleErr))
@@ -85,7 +85,7 @@
 
   function _compileSass() {
     return gulp.src(paths.sass)
-      .pipe(concat('app.min.css'))
+      .pipe(concat('app.css'))
       .pipe(sass(sassOptions))
       .on('error',sass.logError)
       .pipe(gulp.dest(paths.roots.base));
