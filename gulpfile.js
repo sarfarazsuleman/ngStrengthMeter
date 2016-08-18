@@ -24,7 +24,7 @@
 
     roots: {
       base: distRoot,
-      template: distRoot+'/templates',
+      template: distRoot,
       images: distRoot+'/images',
     }
   }
