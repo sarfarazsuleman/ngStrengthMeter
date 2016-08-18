@@ -39,6 +39,7 @@
   var
     gulp            = require('gulp'),
     concat          = require('gulp-concat'),
+    connect         = require('gulp-connect'),
     jshint          = require('gulp-jshint'),
     ngAnnotate      = require('gulp-ng-annotate'),
     rename          = require('gulp-rename'),
@@ -52,7 +53,7 @@
   gulp.task('default',[]);
 
   gulp.task('build',['compileVendor','compileJs','compileSass','compileTemplates','compileImages']);
-  gulp.task('develop',['watch']);
+  gulp.task('develop',['serve','watch']);
 
   gulp.task('compileImages', _compileImages);
   gulp.task('compileJs',['jshint'], _compileJs);
@@ -61,6 +62,8 @@
   gulp.task('compileVendor',_compileVendor);
 
   gulp.task('jshint',_jsHint);
+
+  gulp.task('serve',_serve);
 
   gulp.task('watch',_watch);
 
@@ -109,6 +112,12 @@
         .on('error',_handleErr))
       .pipe(jshint.reporter('jshint-stylish')
         .on('error',_handleErr));
+  }
+
+  function _serve() {
+    return connect.server({
+        root: [paths.roots.template]
+      });
   }
 
   function _watch() {
